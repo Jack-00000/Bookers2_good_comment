@@ -1,7 +1,6 @@
 <div class='container px-5 px-sm-0'>
   <%= render 'layouts/errors', obj: @book %>
   <div class='row'>
-    
     <div class='col-md-3'>
       <h2>User info</h2>
       <%= render 'users/info', user: current_user %>
@@ -9,13 +8,9 @@
       <%= render 'form', book: @book %>
     </div>
     
-    <table class='col-md-7 offset-md-1'>
+    <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
-        <tr>
-          <td><%= render 'index', books: @books%></td>
-          <td><%= render 'favorites/favorite', book: @book %></td>
-        </tr>
-    </table>
-    
+      <%= render 'index', books: @books%>
+    </div>
   </div>
 </div>
